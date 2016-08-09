@@ -2,7 +2,14 @@
   <ion-content class="padding">
     <h2>Welcome to Ionic</h2>
     <div>
-      <a href="" ng-click="googleLogin()"><button>Login With Google</button></a>
+      <a href="" ng-click="googleLogin()"><button class="button button-block button-positive">Login With Google</button></a>
+      <span>{{details}}</span>
+    </div>
+    <div ng-show="showProfile" class="list">
+      <a class="item item-avatar" href="#">
+        <img ng-src="{{details.image.url}}">
+        <h2>{{details.displayName}}</h2>
+      </a>
     </div>
   </ion-content>
 </ion-view>
